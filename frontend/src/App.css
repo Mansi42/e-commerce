@@ -1,0 +1,198 @@
+.App {
+  text-align: center;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b2430;
+  padding: 20px 80px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.06);
+}
+#navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+#navbar li{
+  list-style: none;
+  padding: 0px 20px;
+  position: relative;
+  }
+  
+#navbar li a{
+
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3em;
+    transition: 0.3s ease-in-out;
+  } 
+  #navbar li a:hover,
+   #navbar li a.active{
+    color:blueviolet;
+  } 
+  #navbar li a:hover::after,
+  #navbar li a.active::after{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: blueviolet;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  } 
+  #mobile i{
+    color: #fff;
+    align-items: center;
+  }
+  #mobile{
+    display: none;
+  }
+
+  @media screen and (max-width:769px){
+    #navbar{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top:90px;
+      right:-300px;
+      width: 300px;
+      height: 100vh;
+      background: #2a3239;
+      box-shadow: 0px 40px 6px rgba(0,0,0,0.1);
+      padding: 40px 0 0 10px;
+      margin-top: -10px;
+      transition: 0.3s ease-in-out;
+    }
+    #navbar.active{
+      right: 0px;
+    }
+    #navbar li{
+      margin-bottom: 25px;
+    }
+    #mobile{
+      display: block;
+    }
+    #mobile i{
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+  }
+  
+  #footer{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    background-color: #1b2430 ;
+    color: rgb(187, 207, 207);
+  }
+
+  .inputBox{
+    display: block;
+    margin:25px;
+    margin-left:40%;
+    padding:7px;
+    width:300px;
+    border:1px solid blueviolet;
+  }
+  .signupform , .productform{
+    border:3px solid black;
+    border-radius: 20px;
+    margin: 100px 500px 100px 500px;
+    padding-right: 200px;
+    padding-top:30px;
+    padding-bottom:30px;
+
+  }
+  .signupform , .productform  h1{
+    margin-left:45%
+  }
+  .loginform{
+    border:3px solid black;
+    border-radius: 20px;
+    margin: 100px 500px 100px 500px;
+    padding-right: 200px;
+    padding-top:30px;
+    padding-bottom:30px;
+
+  }
+  .loginform h1{
+    margin-left:45%
+  }
+ .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: blueviolet !important;
+  border: 1px solid blueviolet !important;
+  margin-left:45%
+
+}
+.invalid-input {
+    color: red;
+    display: block;
+    margin-top:-20px;
+    margin-left: 20px;
+
+}
+.product-list{
+  text-align: center;
+  margin-top:50px;
+}
+.product-list ul li{
+  display: inline-block;
+  border: 1px solid skyblue;
+  padding: 5px;
+  width: 250px;
+  height:70px;
+  font-style:'bold';
+  font-size:1.5rem
+}
+.product-list ul{
+  margin:0px
+  
+}
+.searchBox{
+  width:400px;
+  height:50px;
+  border: 1px solid skyblue;
+  padding:10px;
+  margin:10px;
+ 
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
